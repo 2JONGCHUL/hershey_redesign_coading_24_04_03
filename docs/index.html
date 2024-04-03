@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>허쉬코리아</title>
+
+   <!-- 웹사이트가 모바일 장치에서 적절하게 보이고 작동하도록 조절 -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- JQ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<!-- 테일윈드 -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- swiper -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- 폰트어썸 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></script>
+<link rel="stylesheet" 
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+<!-- gasp 불러오기 -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+<!-- ScrollTrigger트리거 불러오기 -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+<!-- AOS 라이브러리 불러오기 -->
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+    <script defer src="script/script.js"></script>
+
+    <link rel="stylesheet" href="style/style.css" />
+
+    <link rel="stylesheet" href="style/font.css" />
+  </head>
+  <body>
+    <div class="hershey_wrap">
+      <header class="top-bar">
+        <div class="top-bar__con flex items-center">
+          <h1>
+            <a href="#" class="top-bar__logo">
+              <img src="../oirignal_project/images/HSlogo.png" alt="허쉬로고" />
+            </a>
+          </h1>
+          <nav class="top-bar__nav mx-auto">
+            <ul class="flex items-center h-full">
+              <li>
+                <a href="#">BRANDES</a>
+                <div class="gnb-dep2">
+                  <ul>
+                    <li><a href="#">HERSHEY'S</a></li>
+                    <li><a href="#">KISSES</a></li>
+                    <li><a href="#">BROOKSIDE</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#">STORE</a>
+                <div class="gnb-dep2">
+                  <ul>
+                    <li><a href="#">매장찾기</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#">EVENT</a>
+                <div class="gnb-dep2">
+                  <ul>
+                    <li><a href="#">#허쉬태그</a></li>
+                    <li><a href="#">Valentine Day</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#">COLLABORATION</a>
+                <div class="gnb-dep2">
+                  <ul>
+                    <li><a href="#">허씨네초콜릿가게</a></li>
+                    <li><a href="#">EDIYA x Hershey</a></li>
+                    <li><a href="#">TWOSOME x Hershey</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <div class="top-bar__icon_box flex items-center h-full w-[50px]">
+            <a href="#">
+              <span>
+                <i class="fa-solid fa-bars top-bar__nav_icon"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+    
+        <!-- 	sidemenu		 -->
+        <div class="sidemenu_wrap">
+          <div class="top_con flex items-center mx-auto">
+    
+            <div class="sidemenu_wrap_logo-box">
+              <img src="../oirignal_project/images/HSlogo2.png" alt="#">
+            </div>
+    
+            <div class="sidemenu_wrap_icon-box flex flex-1 items-center h-full justify-end">
+              <a href="#">
+                <span>
+                  <i class="fa-solid fa-xmark sidemenu_icon"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+          <nav class="sidemenu-navbar mx-auto">
+            <ul class="flex flex-col justify-center items-start">
+              <li>
+                <a href="#">BRANDES</a>
+                <ul>
+                  <li><a href="#">HERSHEY'S</a></li>
+                  <li><a href="#">KISSES</a></li>
+                  <li><a href="#">BROOKSIDE</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">STORE</a>
+                <ul>
+                  <li><a href="#">매장찾기</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">EVENT</a>
+                <ul>
+                  <li><a href="#">허씨네초콜릿가게</a></li>
+                  <li><a href="#">#허쉬태그</a></li>
+                  <li><a href="#">Valentine Day</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">COLLABORATION</a>
+                <ul>
+                  <li><a href="#">TWOSOME</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    
+      <main>
+        <section class="section__head">
+          <video autoplay loop muted src="../oirignal_project/images/home-chocolate-world-video-spring.mp4" class="section__main_video"></video>
+        </section>
+    
+        <section class="hersheys-brands">
+          <div class="hersheys-brands__con mx-auto">
+            <div class="section-title hershey_brands-title">
+                <h2>
+                  BRANDS
+                </h2>
+              </div>
+    
+            <div class="hersheys-brands__items flex mx-auto">
+              <div class="hersheys-brands__itemsbox itemsbox01 flex flex-col" data-aos="zoom-in-up">
+                <div class="img-box img-box01">
+                  <a href="#">
+                    <img src="../oirignal_project/images/home_hershey.jpg" alt="허쉬초콜릿이미지">
+                  </a>
+                </div>
+    
+                <div class="txt-box txt-box01">
+                  <h1>HERSHEY</h1>
+                  <p>행복한 순간을 만드는 행복의 맛
+                    허쉬의 제품라인을 소개합니다.</p>
+                </div>
+              </div>
+    
+              <div class="hersheys-brands__itemsbox itemsbox02 flex flex-col mx-auto" data-aos="zoom-in-up">
+                <div class="img-box img-box02">
+                  <a href="#">
+                    <img src="../oirignal_project/images/home_kisses.jpg" alt="키세스초콜릿이미지">
+                  </a>
+                </div>
+    
+                <div class="txt-box txt-box02">
+                  <h1>KISSES</h1>
+                  <p>사랑을 전하는 가장 달콤한 방법
+                    키세스를 소개합니다.</p>
+                </div>
+              </div>
+    
+              <div class="hersheys-brands__itemsbox itemsbox03 flex flex-col" data-aos="zoom-in-up">
+                <div class="img-box img-box03">
+                  <a href="#">
+                    <img src="../oirignal_project/images/home_brookside.jpg" alt="브룩사이드초콜릿이미지">
+                  </a>
+                </div>
+    
+                <div class="txt-box txt-box03">
+                  <h1>BROOKSIDE</h1>
+                  <p>특별한 날을 더욱더 특별하게 만들어주는 프리미엄 초콜릿
+                    브룩사이드를 소개합니다.</p>
+                </div>
+              </div>
+    
+            </div>
+    
+            <div class="hersheys-brands__menuslide brands__wiper">
+              <div class="section-title hershey_brands-title">
+                <h2>
+                  BRAND MENU
+                </h2>
+              </div>
+              <div class="swiper brands_slider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <a href="#">
+                      <div class="brandmenu-item-img brandmenu-item-img01">
+                        <img src="../oirignal_project/images/product1_1.png" alt="허쉬 레귤러바 밀크 40g">
+                      </div>
+                      <div class="brandmenu-item-txt brandmenu-item-txt01">
+                        <h3>허쉬 레귤러바 밀크 40g</h3>
+                        <p>1,280원</p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#">
+                      <div class="brandmenu-item-img brandmenu-item-img01">
+                        <img src="../oirignal_project/images/product1_2.png" alt="허쉬 레귤러바 밀크 40g">
+                      </div>
+                      <div class="brandmenu-item-txt brandmenu-item-txt01">
+                        <h3>허쉬 레귤러바 쿠키앤크림 40g</h3>
+                        <p>1,280원</p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#">
+                      <div class="brandmenu-item-img brandmenu-item-img01">
+                        <img src="../oirignal_project/images/product1_3.png" alt="허쉬 레귤러바 아몬드 40g">
+                      </div>
+                      <div class="brandmenu-item-txt brandmenu-item-txt01">
+                        <h3>허쉬 레귤러바 아몬드 40g</h3>
+                        <p>1,280원</p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#">
+                      <div class="brandmenu-item-img brandmenu-item-img01">
+                        <img src="../oirignal_project/images/product1_4.png" alt="허쉬 너겟 밀크 56g">
+                      </div>
+                      <div class="brandmenu-item-txt brandmenu-item-txt01">
+                        <h3>허쉬 너겟 밀크 56g</h3>
+                        <p>2,080원</p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#">
+                      <div class="brandmenu-item-img brandmenu-item-img01">
+                        <img src="../oirignal_project/images/product2_1.png" alt="허쉬 너겟 쿠앤크 56g">
+                      </div>
+                      <div class="brandmenu-item-txt brandmenu-item-txt01">
+                        <h3>허쉬 너겟 쿠앤크 56g</h3>
+                        <p>2,080원</p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#">
+                      <div class="brandmenu-item-img brandmenu-item-img01">
+                        <img src="../oirignal_project/images/product2_2.png" alt="허쉬 라지바 밀크 100g">
+                      </div>
+                      <div class="brandmenu-item-txt brandmenu-item-txt01">
+                        <h3>허쉬 라지바 밀크 100g</h3>
+                        <p>2,880원</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="brand-swiper-btn-group">
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                </div>
+              </div>
+            </div>
+        </section>
+    
+        <section class="hershey__video">
+          <div class="bottom-videobox">
+            <figure class="bottom-video">
+              <video autoplay loop muted width="100%" object-fit:'full' src="https://ifh.cc/v/NTSNTq.mp4" class="video2">
+              </video>
+            </figure>
+          </div>
+        </section>
+    
+        <!-- 	collaboration 영역	 -->
+        <section class="hershey_collabo">
+          <div class="hershey_collabo-con mx-auto">
+            <div class="section-title hershey_collabo-title">
+              <h2>
+                COLLABORATION
+              </h2>
+    
+            </div>
+    
+            <div class="hershey_collabo-main flex justify-center">
+              <div class="flip flip01" data-aos="flip-left">
+                <div class="card">
+                  <!-- 앞면 -->
+                  <div class="collabo-item-front collabo01">
+                  </div>
+                  <!-- 뒷면 -->
+                  <div class="collabo-item-back">
+                    <h1>허씨네 초콜릿가게 오픈🍫</h1>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="flip flip02" data-aos="flip-left">
+                <div class="card">
+                  <!-- 앞면 -->
+                  <div class="collabo-item-front collabo02">
+                  </div>
+                  <!-- 뒷면 -->
+                  <div class="collabo-item-back">
+                    <h1>허쉬x이디야 콜라보 출시📍</h1>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="flip flip03" data-aos="flip-left">
+                <div class="card">
+                  <!-- 앞면 -->
+                  <div class="collabo-item-front collabo03">
+                  </div>
+                  <!-- 뒷면 -->
+                  <div class="collabo-item-back">
+                    <h1>허쉬x투썸 콜라보 출시💝</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+    
+        <!-- event 영역 -->
+        <section class="hershey__events">
+          <div class="hershey__events-con mx-auto">
+            <div class="events-box">
+              <div class="section-title events-box_title">
+                <h2>EVENT</h2>
+              </div>
+    
+              <div class="events-box_middle">
+                <div>
+                  <p>허쉬만의 이벤트를 소개합니다.</p>
+                </div>
+              </div>
+              <div class="events-box_bottom" data-aos="fade-up"
+         data-aos-anchor-placement="top-bottom">
+                <div class="events-box_slider swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <a href="#">
+                        <img src="../oirignal_project/images/event1.png" alt="event1">
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#">
+                        <img src="../oirignal_project/images/event2.png" alt="event2">
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#">
+                        <img src="../oirignal_project/images/event3.png" alt="event3">
+                      </a>    
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#">
+                        <img src="../oirignal_project/images/evnet4.png" alt="event4">
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#">
+                        <img src="../oirignal_project/images/evnt5.png" alt="event5">
+                      </a>
+                    </div>
+                  </div>
+                  <!-- 		swiper progressbar		 -->
+                  <div class="pagination-box">
+                    <div class="swiper-pagination"></div>
+                  </div>
+                  <!-- 		swiper left right navigation		 -->
+                  <div class="swiper-btn-group">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
+    
+        <!-- hershey banner -->
+        <section class="hershey__banner">
+          <div class="banner-box mx-auto flex">
+            <div class="banner01 flex-1">
+              <a href="#">BRANDS 보러가기
+              </a>
+            </div>
+            <div class="banner02 flex-1">
+              <a href="#">EVENTS 보러가기
+    
+              </a>
+            </div>
+            <div class="banner03 flex-1">
+              <a href="#">STORE 보러가기
+            </div>
+          </div>
+        </section>
+      </main>
+    
+      <!-- 	<aside>
+        <div class="aside-menu">
+          <a href="#">
+            <div></div>
+          </a>
+        </div>
+      </aside> -->
+    
+      <footer>
+        <div class="footer-con mx-auto">
+          <div class="footer-box footer-topbox h-full">
+            <div class="footer-logobox">
+              <a href="#">
+                <img src="../oirignal_project/images/HSlogo.png" alt="허쉬로고">
+              </a>
+            </div>
+          </div>
+          <div class="footer-box footer-middlebox">
+            <ul class="flex justify-end">
+              <li><a href="#">CAREERS</a></li>
+              <li><a href="#">CONTACT US</a></li>
+              <li><a href="#">FAQ's</a></li>
+              <li><a href="#">HERSHEYLAND</a></li>
+            </ul>
+          </div>
+          <div class="footer-box footer-bottombox flex">
+            <div class="contactbox">
+              <ul>
+                <li>
+                  <strong>대표자</strong>
+                  코페 요안 마르셀 장 피에르 & 이종철
+                </li>
+                <li>
+                  <strong>TEL</strong>
+                  010-9532-3239
+                </li>
+                <li>
+                  <strong>EMAIL</strong>
+                  dlwhdcjf15@naver.com
+                </li>
+                <li>
+                  <strong>ADDRESS</strong>
+                  서울시 종로구 새문안로 76 (신문로1가, 콘코디언빌딩), 4층
+                </li>
+              </ul>
+              <p>© 2024 THE HERSHEY COMPANY. ALL RIGHTS RESERVED.</p>
+            </div>
+            <div class="snsbox">
+              <ul class="flex h-full">
+                <li>
+                  <a href="#">
+                    <span class="sns-icon sns-icon__facebook">
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="sns-icon sns-icon__twitter">
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="sns-icon sns-icon__instagram">
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="sns-icon sns-icon__youtube">
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+
+<!-- html 마지막 script에 넣기  -->
+<script> 
+	AOS.init();
+</script>

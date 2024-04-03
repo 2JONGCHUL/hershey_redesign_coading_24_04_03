@@ -1,0 +1,1030 @@
+/* 공통 속성에 대한 값들 상단에 넣어주기 */
+html {
+  background-color: var(--color2);
+}
+
+img {
+  display: block;
+  height: 100%;
+}
+
+:root {
+  --bg-color: #47221c;
+  --color2: #f6f0e9;
+  --pd: 55px 0 60px;
+}
+
+.section-title > h2 {
+  text-align: center;
+  font-size: 2vw;
+  font-weight: bold;
+  color: var(--bg-color);
+  white-space: nowrap;
+  text-align: center;
+  padding: var(--pd);
+}
+/* 커스텀 시작 */
+
+/* TOP-BAR 시작 */
+.top-bar {
+  /*max-width: 1400px;*/
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+  transition: background-color 0.5s, height 0.3s;
+}
+.top-bar.active {
+  background-color: white;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* TOP-BAR CONTAINER */
+.top-bar > .top-bar__con {
+  /*   height: 100%; */
+  width: 100%;
+  vertical-align: top;
+}
+
+/* header 로고, 이미지 */
+.top-bar > .top-bar__con > h1 {
+  height: 50px;
+  margin-left: 30px;
+}
+
+.top-bar .top-bar__logo > img {
+  display: block;
+  height: 100%;
+}
+
+/* header nav 1차 메뉴 */
+.top-bar__nav {
+  height: 100%;
+  z-index: 9999;
+}
+
+.top-bar__nav.active {
+  display: none;
+}
+
+.top-bar__nav > ul {
+}
+
+.top-bar__nav > ul > li {
+  position: relative;
+}
+
+.top-bar__nav > ul > li > a {
+  display: block;
+  height: 100%;
+  margin: 0 60px;
+  padding: 35px 0;
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  color: white;
+}
+
+.top-bar__nav > ul > li > a.active {
+  color: var(--bg-color);
+}
+
+/* header nav 1차 메뉴 호버 */
+.top-bar__nav > ul > li > a.hover {
+  color: #39020b;
+}
+
+.top-bar__nav > ul > li > a:hover {
+  /*   color: #9b1d33; */
+  color: #cc253b;
+  transition: color 0.5s;
+}
+
+.top-bar__nav > ul > li:hover::before {
+  content: "\f564";
+  font-family: "FontAwesome";
+  position: absolute;
+  top: 35px;
+  left: 38px;
+  color: #39020b;
+  display: block;
+  width: 10px;
+  height: 10px;
+}
+
+.top-bar__nav > ul > li > a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: var(--bg-color);
+  transition: width 0.3s;
+}
+
+.top-bar__nav > ul > li > a:hover::after {
+  width: 100%;
+}
+
+.top-bar__nav > ul > li:hover {
+  color: #39020b;
+}
+
+/* header nav 2차 메뉴 */
+.top-bar__nav > ul ul {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  height: 175px;
+  display: none;
+}
+
+.top-bar__nav > ul ul > li {
+  margin-top: 23px;
+}
+
+.top-bar__nav > ul ul > li:hover {
+  font-weight: bold;
+}
+
+.top-bar__nav > ul ul > li > a {
+  font-size: 14px;
+  display: block;
+  height: 100%;
+  text-align: center;
+}
+
+/* 우측 상단-- 햄버거바 사이드메뉴 시작 */
+.top-bar__icon_box {
+}
+
+.top-bar__nav_icon {
+  color: black;
+  font-size: 25px;
+}
+
+/* 우측 상단-- 배경 */
+.sidemenu_wrap {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: url(../images/bg_brand_sec1.webp) repeat 50% 50%;
+  top: 0;
+  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.sidemenu_wrap.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.sidemenu_wrap > div {
+  height: 100px;
+  width: 90%;
+}
+
+.sidemenu_wrap_logo-box {
+}
+
+.sidemenu_wrap_icon-box .sidemenu_icon {
+  color: white;
+  font-size: 30px;
+  z-index: 99;
+}
+
+/* 우측 상단-- 사이드 1차메뉴*/
+.sidemenu_wrap > nav {
+  height: 100%;
+  width: 90%;
+}
+
+.sidemenu_wrap > nav > ul {
+  height: 80%;
+}
+
+.sidemenu_wrap > nav > ul > li {
+}
+
+.sidemenu_wrap a {
+  /* 	display: block; */
+  color: white;
+}
+
+.sidemenu_wrap > nav > ul > li > a {
+  font-size: 2.5rem;
+  margin: 10px 0px;
+  font-weight: bold;
+  /* 	border:1px solid red; */
+}
+.sidemenu_wrap > nav > ul ul a {
+  margin: 7px 0px;
+}
+
+/*  햄버거바 사이드메뉴 2차 메뉴 */
+.sidemenu_wrap > nav > ul ul > li > a {
+  font-size: 1.3rem;
+}
+
+.sidemenu_wrap > nav > ul ul {
+  /* 	display: none; */
+}
+
+.sidemenu_wrap > nav > ul > li:hover > a {
+  color: #cc253b;
+}
+
+.sidemenu_wrap > nav > ul ul > li:hover > a {
+  color: #cc253b;
+}
+
+.sidemenu_wrap > nav > ul > li > a::after {
+  font-family: "FontAwesome";
+  content: "\f078";
+  font-size: 15px;
+  margin-left: 10px;
+}
+
+.sidemenu_wrap > nav > ul > li.active > a::after {
+  content: "\f077";
+}
+
+/* 섹션1 -- 메인 영상 페이지 */
+.section__head {
+  position: relative;
+}
+
+.section__main_video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+.section__main_video::before {
+  content: "";
+  background-color: rgba(71, 34, 28, 0.5);
+}
+
+.section__head > div {
+  position: absolute;
+  top: 70%;
+  left: 10%;
+  color: white;
+  text-shadow: 0px 8px 24px rgba(0, 0, 0, 0.8);
+  font-weight: bold;
+}
+
+/* 섹션1 -- 메인 영상 텍스트 */
+.section__head > div > h2 {
+  font-size: 46px;
+}
+
+.section__head > div > p {
+  font-size: 30px;
+  text-align: end;
+}
+
+/* 섹션2 -- BRANDS 페이지 시작 */
+.hersheys-brands {
+  /* background:url('https://www.chocolateworld.com/content/dam/hershey…te-world/images/patterns/kiss-pale-green-bkgd.svg') no-repeat 20% 100% / cover;
+	 */
+}
+
+.hersheys-brands__con {
+  width: 75%;
+}
+
+/* 섹션2 -- BRANDS BANNER */
+.hersheys-brands__banner {
+  /* margin-top: 50px; */
+  padding: 55px 0 60px;
+  /* opacity: 0; */
+  transition: opacity 1s;
+}
+
+.hersheys-brands__banner.on {
+  opacity: 1;
+}
+
+.hersheys-brands__items {
+  padding-bottom: 60px;
+  gap: 20px;
+}
+
+.hersheys-brands__itemsbox {
+  width: 430px;
+  height: 360px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.img-box {
+  position: relative;
+  height: 70%;
+}
+
+.img-box img {
+  height: 100%;
+  transition: transform 0.7s;
+}
+
+/* 섹션2 -- BRANDS 이미지 호버 */
+.img-box:hover img {
+}
+
+.img-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: background-color 0.7s;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 1;
+}
+
+.img-box:hover::after {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.img-box::before {
+  content: "";
+  background: url(../images/brandobj1.png) no-repeat 100% 100% / cover;
+  height: 40%;
+  width: 30%;
+  color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  opacity: 0;
+  transition: opacity 0.7s;
+}
+
+.img-box:hover::before {
+  opacity: 1;
+}
+
+.txt-box {
+  background-color: white;
+  padding: 30px;
+  height: 30%;
+}
+
+.txt-box {
+  align-content: center;
+}
+
+.txt-box h1 {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.txt-box p {
+  font-size: 14px;
+}
+
+.hersheys-brands__menuslide {
+  padding: var(--pd);
+}
+
+.hershey_brands-title {
+}
+
+.brands_slider .swiper-slide {
+  background-color: white;
+  height: 280px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.brands_slider .swiper-slide > a > img {
+}
+
+.brandmenu-item-img {
+  height: 70%;
+  align-content: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.brandmenu-item-img > img {
+  margin: 0 auto;
+  display: flex;
+  height: 50%;
+  align-self: center;
+}
+
+.brandmenu-item-txt {
+  height: 30%;
+  align-content: center;
+  text-align: center;
+}
+
+.brandmenu-item-txt p {
+  color: orange;
+}
+
+.brand-swiper-btn-group > .swiper-button-prev,
+.brand-swiper-btn-group > .swiper-button-next {
+  background-color: white;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.4);
+}
+
+.brand-swiper-btn-group > .swiper-button-prev::after,
+.brand-swiper-btn-group > .swiper-button-next::after {
+  display: none;
+}
+
+.brand-swiper-btn-group > .swiper-button-prev::before,
+.brand-swiper-btn-group > .swiper-button-next::before {
+  content: "\f104";
+  font-family: "FontAwesome";
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 15px;
+}
+.brand-swiper-btn-group > .swiper-button-next::before {
+  content: "\f105";
+}
+
+/* 섹션2 video 시작 */
+.hershey__video {
+  padding-top: 125px;
+  padding-bottom: 150px;
+  position: relative;
+}
+
+.bottom-videobox {
+  box-shadow: inset 0px 0px 20px black;
+  margin: 0 auto;
+  /* 	#47221c */
+}
+
+.bottom-video {
+  height: 30.3333333333vw;
+  width: 100%;
+  /* 	transition:opacity 0.8s; */
+}
+
+.bottom-video {
+  opacity: 0.6;
+}
+
+.video2 {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* 섹션3 collaboration 시작 */
+.hershey_collabo {
+  /* 	background-color: #f6f0e9; */
+  background: url("../images/pattern-ticket-bundle-hoursbkgd-white-reeses\ \(1\).jpg")
+    100% 100% / cover;
+}
+
+.hershey_collabo-con {
+  width: 75%;
+}
+
+.hershey_collabo-main {
+  padding-bottom: 125px;
+  gap: 20px;
+}
+
+.flip {
+  width: 430px;
+  height: 360px;
+  position: relative;
+  perspective: 1100px;
+  border-radius: 10px;
+}
+
+.flip02 {
+  /* 	margin-left: 3rem;
+	margin-right: 3rem; */
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: 0.4s;
+  transform-style: preserve-3d;
+}
+
+.collabo-item-front,
+.collabo-item-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.collabo01 {
+  background: url("../images/허씨네\ 초콜릿가게.png") no-repeat 100% 100% /
+    cover;
+  padding: 10px;
+}
+
+.collabo02 {
+  background: url("../images/이디야x허쉬.png") no-repeat 100% 100% / cover;
+}
+
+.collabo03 {
+  background: url("../images/투썸x허쉬.png") no-repeat 100% 100% / cover;
+}
+
+.collabo-item-back {
+  background: var(--bg-color);
+  transform: rotateY(180deg);
+}
+
+.flip:hover .card {
+  transform: rotateY(180deg);
+}
+
+/* 섹션4-- events 페이지 시작 */
+.hershey__events {
+  /* 	background-color: #f6f0e9; */
+}
+
+.hershey__events > .hershey__events-con {
+  height: 100%;
+  width: 75%;
+  position: relative;
+}
+
+.hershey__events .bg > img {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  opacity: 0.2;
+  top: 28%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.events-box_middle {
+  border-bottom: 1px solid rgba(57, 2, 11, 0.2);
+  padding-bottom: 25px;
+  color: #47220c;
+}
+
+.events-box_middle > div:first-child {
+  font-size: 13px;
+}
+
+.events-box_middle > div:first-child > p::after {
+  content: "\f810";
+  font-family: "FontAwesome";
+  margin-left: 5px;
+}
+
+.events-box_middle > div:last-child {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.events-box_bottom {
+  padding-bottom: 160px;
+}
+
+.events-box_slider {
+  margin-top: 25px;
+  width: 100%;
+}
+
+.swiper-slide {
+  width: 380px;
+  margin-right: 25px;
+}
+
+.swiper-slide:hover {
+  box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s;
+}
+
+.swiper-slide img {
+  margin: 0 auto;
+}
+
+/* swiper progressbar */
+.pagination-box {
+  width: 100%;
+  max-width: 1540px;
+  height: 40px;
+  margin-top: 25px;
+  position: relative;
+}
+
+.events-box_slider .swiper-pagination {
+  position: relative;
+  width: 100%;
+  height: 1px;
+  background-color: #c5c5c5;
+  z-index: 2;
+}
+
+.swiper-pagination-progressbar-fill {
+  background-color: #47221c !important;
+}
+
+/* swiper left right navigation */
+.events-box_slider > .swiper-btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+.events-box_slider .swiper-button-prev {
+  margin-right: 10px;
+}
+
+.events-box_slider .swiper-button-prev,
+.events-box_slider .swiper-button-next {
+  position: static;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  transition: border 0.5s;
+}
+
+.events-box_slider .swiper-button-prev:hover,
+.events-box_slider .swiper-button-next:hover {
+  border: 1px solid rgba(0, 0, 0, 1);
+}
+
+.events-box_slider .swiper-button-prev::after,
+.events-box_slider .swiper-button-next::after {
+  display: none;
+}
+
+.events-box_slider .swiper-button-prev::before,
+.events-box_slider .swiper-button-next::before {
+  content: "\f104";
+  font-family: "FontAwesome";
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 10px;
+}
+
+.events-box_slider .swiper-button-next::before {
+  content: "\f105";
+}
+
+/* banner 시작 */
+.banner-box {
+  max-height: 180px;
+  height: 180px;
+  width: 100%;
+}
+
+.banner-box > div {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.banner-box > div:first-child {
+  color: black;
+}
+
+.banner-box > .banner01 {
+  background: url("../images/banner_products.jpg") no-repeat 100% 100% / cover;
+}
+
+.banner-box > .banner02 {
+  background: url("../images/ourstory-process.jpeg") no-repeat 100% 100% / cover;
+}
+
+.banner-box > .banner03 {
+  background: url("../images/banner_event.jpg") no-repeat 100% 100% / cover;
+}
+
+/* aside-menu choco */
+.aside-menu {
+  position: fixed;
+  bottom: 15%;
+  right: 10%;
+  height: 14%;
+  width: 100%;
+  z-index: 100;
+  /* 	right: calc(28%-300px); */
+}
+
+/* .aside-menu > a > div {
+	background: url("https://ifh.cc/g/AJTfbO.png") no-repeat 100% 100%;
+	height: 100%;
+	width: 100%;
+} */
+
+/* aside-menu choco keyframe */
+
+/* 푸터 시작 */
+footer {
+  background-color: white;
+  width: 100%;
+}
+
+.footer-con {
+  /* 	height:400px; */
+  width: 80%;
+  padding: 1.5rem;
+}
+
+.footer-box {
+  height: 100%;
+  width: 100%;
+}
+
+.footer-topbox {
+  margin-bottom: 20px;
+  /* 	border:1px solid gold; */
+  border-bottom: 1px solid rgba(57, 2, 11, 0.6);
+}
+
+.footer-logobox {
+  margin-bottom: 20px;
+}
+
+.footer-middlebox {
+  margin: 25px 0 25px 0;
+}
+
+.footer-middlebox > ul > li {
+  margin-left: 30px;
+}
+
+.footer-middlebox > ul > li > a {
+  font-size: 11px;
+}
+
+.footer-bottombox {
+  color: rgba(0, 0, 0, 0.7);
+  justify-content: space-between;
+}
+
+.contactbox {
+  font-size: 12px;
+}
+
+.contactbox > p {
+  margin-top: 20px;
+}
+
+.contactbox > ul > li {
+  display: flex;
+  white-space: nowrap;
+}
+
+.contactbox > ul > li > strong {
+  width: 6rem;
+}
+
+.snsbox {
+}
+
+.snsbox > ul {
+}
+
+.snsbox > ul > li {
+  align-self: center;
+  margin-left: 30px;
+}
+
+.sns-icon {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+  font-size: 25px;
+}
+
+.sns-icon__facebook::before {
+  content: "\f09a";
+}
+
+.sns-icon__twitter::before {
+  content: "\f099";
+}
+
+.sns-icon__instagram::before {
+  content: "\f16d";
+}
+.sns-icon__youtube::before {
+  content: "\f167";
+}
+
+/* 반응형 시작 */
+@media (width <= 1380px) {
+  .hersheys-brands__itemsbox {
+    width: 300px;
+    height: 300px;
+  }
+  .txt-box {
+    padding: 15px;
+  }
+  .txt-box h1 {
+    font-size: 1rem;
+  }
+  .txt-box p {
+    font-size: 12px;
+  }
+}
+
+@media (width < 1280px) {
+  .top-bar__con {
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+
+  .top-bar__nav {
+    display: none;
+  }
+
+  .top-bar__icon_box {
+    width: auto;
+    justify-content: end;
+    margin-right: 5%;
+  }
+
+  .sidemenu_wrap > nav > ul > li > a {
+    font-size: 1.5rem;
+  }
+  .sidemenu_wrap > nav > ul ul > li > a {
+    font-size: 1rem;
+  }
+
+  .collabo01 {
+    background: url("../images/허씨네\ 초콜릿가게.png") no-repeat 50% 100% /
+      cover;
+  }
+  .collabo02 {
+    background: url("../images/이디야x허쉬.png") no-repeat 50% 100% / cover;
+  }
+
+  .collabo03 {
+    background: url("../images/투썸x허쉬.png") no-repeat 50% 100% / cover;
+  }
+
+  .flip {
+    width: 260px;
+    height: 260px;
+  }
+
+  .events-box_bottom {
+    padding-bottom: 100px;
+  }
+
+  /* 	푸터 시작 */
+
+  /* 	푸터 끝 */
+}
+
+@media (width <= 882px) {
+  .hersheys-brands__itemsbox {
+    width: 300px;
+    height: 300px;
+  }
+  .txt-box {
+    padding: 10px;
+  }
+  .txt-box h1 {
+    font-size: 0.8rem;
+  }
+  .txt-box p {
+    font-size: 11px;
+  }
+
+  .hershey_collabo-main {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* 스마트폰 가로, 태블릿 769이하 일 때 */
+@media (width <= 769px) {
+  /* 타이틀 (brands, collabo, event) 시작 */
+  .section-title h2 {
+    padding: 25px 0 30px;
+    font-size: 5vw;
+  }
+  /* 타이틀 (brands, collabo, event) 끝 */
+
+  /* BRANDS 영역	 */
+  .section__head {
+    padding-bottom: 30px;
+  }
+  .hersheys-brands__items {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hersheys-brands__itemsbox {
+    width: 260px;
+    height: 260px;
+  }
+  .txt-box {
+    padding: 10px;
+  }
+  .txt-box h1 {
+    font-size: 0.8rem;
+  }
+  .txt-box p {
+    font-size: 11px;
+  }
+  .brands__wiper {
+    padding: 25px 0 30px;
+  }
+
+  /* 	video 섹션 */
+  .hershey__video {
+    padding-top: 70px;
+    padding-bottom: 95px;
+  }
+
+  .bottom-video {
+    height: 40.444vh;
+  }
+
+  .flip {
+  }
+
+  /*  맨 하단 배너	 */
+  .banner-box {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .footer-con {
+    width: 95%;
+  }
+
+  .footer-middlebox > ul {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .footer-middlebox > ul > li:nth-child(1) {
+  }
+
+  .footer-middlebox > ul > li {
+    margin: 0;
+  }
+
+  .footer-middlebox > ul > li > a {
+    font-size: 10px;
+  }
+
+  .contactbox {
+    font-size: 9px;
+  }
+
+  .footer-bottombox {
+    flex-direction: column;
+  }
+
+  .snsbox {
+    margin-top: 20px;
+    display: block;
+  }
+
+  .snsbox > ul {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .snsbox > ul > li {
+    margin: 0;
+  }
+}
+
+/* 스마트폰 세로 481 미만 일 때*/
+@media (width < 481px) {
+  /* 타이틀 (brands, collabo, event) 시작 */
+
+  /* 타이틀 (brands, collabo, event) 끝 */
+
+  /* 카드 크기 */
+}
